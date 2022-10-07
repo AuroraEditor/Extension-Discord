@@ -1,9 +1,14 @@
 # Official Discord extension for AuroraEditor
 
-WORK IN PROGRESS THIS MAY NOT WORK.
+> ⚠️ WORK IN PROGRESS
+> 
+> THIS MAY NOT WORK AS EXPECTED.
 
 THE `0xWDG` workspace is used `AEExtensionKit`, it requires you to have a top level `AEExtensionKit` folder.
+
 There is no need to use that workspace, but as long as i'm busy with `AEExtensionKit` the workspace fill stay inside this folder.
+
+---
 
 Thanks for using.
 
