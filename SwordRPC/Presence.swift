@@ -49,7 +49,11 @@ public extension SwordRPC {
     internal func startPresenceUpdater() {
         log.notice("Starting presence updater.")
 
-        self.presenceUpdater = self.currentPresence.throttle(for: .seconds(3), scheduler: self.worker, latest: true ).sink { presence in
+        self.presenceUpdater = self.currentPresence.throttle(
+            for: .seconds(3),
+            scheduler: self.worker,
+            latest: true
+        ).sink { presence in
             if let presence = presence {
                 try? self.sendPresence(presence)
             } else {
