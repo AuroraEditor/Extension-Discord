@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0463E50B27F749CD00806D5C /* Discord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463E50A27F749CD00806D5C /* Discord.swift */; };
 		2B20A83D28EF4C5B00D14316 /* AEExtensionKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B20A83C28EF4C5B00D14316 /* AEExtensionKit */; };
+		2B2ACB7128FE9EDD00B5B3C6 /* AEExtensionKit in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C5D7D28F0672E00C9334D /* AEExtensionKit */; };
 		2B421AE628FE7F55004E761B /* AEExtensionKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 2B20A83C28EF4C5B00D14316 /* AEExtensionKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2B5C5D6628F05EC200C9334D /* DiscordIPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C5D5528F05EC200C9334D /* DiscordIPC.swift */; };
 		2B5C5D6728F05EC200C9334D /* RichPresence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C5D5828F05EC200C9334D /* RichPresence.swift */; };
@@ -211,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2ACB7128FE9EDD00B5B3C6 /* AEExtensionKit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

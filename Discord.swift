@@ -18,9 +18,18 @@ public class DiscordExtension: ExtensionInterface {
         print("Hello from Discord EXT: \(api)!")
     }
 
-    public func didOpen(workspace: String, file: String, contents: Data) {
-        print("didOpen(workspace: String, file: String, contents: Data)", workspace, file)
-        setDiscordStatusTo(project: workspace, custom: file)
+    public func respond(action: String, parameters: [String: Any]) -> Bool {
+        print("respond(action: String, parameters: [String: Any])", action, parameters)
+
+        if action == "didOpen" {
+            if let workspace = parameters["workspace"] as? String,
+               let file = parameters["file"] as? String {
+                print("Setting discord status")
+                setDiscordStatusTo(project: workspace, custom: file)
+            }
+        }
+
+        return true
     }
 
     func setDiscordStatusTo(project: String, custom: String) {
