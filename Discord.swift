@@ -18,6 +18,15 @@ public class DiscordExtension: ExtensionInterface {
         print("Hello from Discord EXT: \(api)!")
     }
 
+    public func register() -> ExtensionManifest {
+        return .init(
+            name: "Discord",
+            displayName: "Discord",
+            version: "1.0",
+            minAEVersion: "1.0"
+        )
+    }
+
     public func respond(action: String, parameters: [String: Any]) -> Bool {
         print("respond(action: String, parameters: [String: Any])", action, parameters)
 
