@@ -50,13 +50,13 @@ public class DiscordExtension: ExtensionInterface {
         let fileIcon = NSURL(string: custom)?.pathExtension ?? "Unknown"
 
         var presence = RichPresence()
-            // Large (AE) Icon
-            presence.assets.largeImage = "auroraeditor"
-            presence.assets.largeText = "AuroraEditor"
+            // Large (File) icon
+            presence.assets.largeImage = fileIcon.lowercased()
+            presence.assets.largeText = "\(fileIcon.uppercased()) File"
 
-            // Small (File) icon
-            presence.assets.smallImage = fileIcon.lowercased()
-            presence.assets.smallText = "\(fileIcon.uppercased()) File"
+            // Small (AE) Icon
+            presence.assets.smallImage = "auroraeditor"
+            presence.assets.smallText = "AuroraEditor"
 
             // Project name
             presence.details = pURL ?? project
