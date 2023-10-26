@@ -11,6 +11,7 @@ import AEExtensionKit
 public class DiscordExtension: ExtensionInterface {
     let rpc = SwordRPC(appId: "1023938668349640734")
     var api: ExtensionAPI
+    var AuroraAPI: AuroraAPI = { _, _ in }
 
     init(api: ExtensionAPI) {
         rpc.connect()
@@ -35,6 +36,21 @@ public class DiscordExtension: ExtensionInterface {
                let file = parameters["file"] as? String {
                 print("Setting discord status")
                 setDiscordStatusTo(project: workspace, custom: file)
+            }
+        }
+
+        if action == "registerCallback" {
+            if let api = parameters["callback"] as? AuroraAPI {
+                AuroraAPI = api
+            }
+
+            print("Idling...")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                print("Idling... SET")
+                self.setDiscordStatusTo(
+                    project: "file://Aurora Editor",
+                    custom: "file://idling"
+                )
             }
         }
 

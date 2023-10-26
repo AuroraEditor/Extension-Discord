@@ -236,7 +236,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f -R ${BUILT_PRODUCTS_DIR}/*.AEext ~/Library/Application\\ Support/com.auroraeditor/Extensions/\n";
+			shellScript = "killall AuroraEditor\ncp -f -R ${BUILT_PRODUCTS_DIR}/*.AEext ~/Library/Application\\ Support/com.auroraeditor/Extensions/\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
